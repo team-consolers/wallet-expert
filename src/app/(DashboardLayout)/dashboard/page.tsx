@@ -1,12 +1,13 @@
 import React from 'react'
 import { TbCurrencyTaka } from "react-icons/tb";
 import { Divider } from '@mui/material'
+import SummeryWidget from '@/components/summeryWidget/SummeryWidget';
 
 const DashboardPage = () => {
   return (
-    <div>
+    <div className="flex flex-wrap md:flex-wrap lg:flex-nowrap justify-between gap-3 md:gap-2 lg:gap-0 mt-3 md:mt-0">
       {/* balance summary card */}
-      <div className="shadow-xl hover:shadow-2xl rounded-md border px-4 py-8 w-72 ">
+      <div className="hover:shadow-2xl rounded-md border border-gray-300 px-4 py-8 w-full  ">
        <h2 className="text-xl font-bold">Summary</h2>
         <div className='flex justify-between'>
           <p className="font-semibold text-gray-600" >Balance</p> <p className='text-green-500'> ৳ 00.00</p>
@@ -19,6 +20,8 @@ const DashboardPage = () => {
           <p className="font-semibold text-gray-600">Total Remanings:</p> <p className='text-green-500'> -৳ 00.00</p>
         </div>
       </div>
+      <SummeryWidget/>
+      <SummeryWidget/>
     </div>
 
 
