@@ -8,7 +8,17 @@ import img2 from '../../../../../public/images/staff2.jpg'
 import img3 from '../../../../../public/images/staff3.jpg'
 import img4 from '../../../../../public/images/staff4.jpg'
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+const theme = createTheme({
+  palette: {
+    customGreen: {
+      main: '#43a047',
+    },
+  },
+});
 const data = [
   {id: 1, image: img1, transactionType:'Entertainment', transactionFrom: 'wallet', amount: 43, date: '12/02/2024'  },
   {id: 2, image: img2, transactionType:'Eating', transactionFrom: 'wallet', amount: 43, date: '31/02/2024'  },
@@ -68,15 +78,20 @@ const TransactionPage = () => {
         </div>
       )}
         </button>
-
-
         <span className='border-r-4 border-r-green-500 ml-2'></span>
       </div>
-  
     </div>)
   }
 </div>
-
+<div className='flex justify-end my-2'>
+<ThemeProvider theme={theme}>
+      <div className='flex justify-end my-2'>
+        <Fab className="hover:bg-green-400 text-white font-bold" color="customGreen" aria-label="add">
+          <AddIcon  />
+        </Fab>
+      </div>
+    </ThemeProvider>
+</div>
     </div>
   )
 }

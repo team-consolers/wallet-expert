@@ -27,8 +27,8 @@ const DashboardPage = () => {
       <SummeryWidget/>
     </div>
     <LineChartUi/>
-    <h3 className="font-bold text-gray-600 mt-12 ">Last 7Days Income and Expenses</h3>
-   <div className='flex md:flex-col lg:flex-row gap-5 lg:gap-12'>
+    <h3 className="font-bold text-gray-600 mt-12 mb-2 ">Last 7Days Income and Expenses</h3>
+   <div className='flex flex-col md:flex-col lg:flex-col xl:flex-row gap-5 lg:gap-12 mb-12 h-72 '>
    <BarChartUi/>
     <TotalAmount/>
    </div>

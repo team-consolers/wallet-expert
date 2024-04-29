@@ -16,7 +16,7 @@ const BarChartUi = () => {
     datasets: [
       {
         label: 'Income',
-        data: [10, 20, 30, 50, 0, 70, 80],
+        data: [10, 20, 30, 50, 0, 70, 110],
         backgroundColor: ['green',],
       },
       {
@@ -28,8 +28,7 @@ const BarChartUi = () => {
   };
 
   return (
-    <div className="container mx-auto">
-        {/* <h2 >Last 7 Days Income and Expenses</h2> */}
+    <div className="container mx-auto w-full lg:w-1/2 h-72">
       <BarChart data={chartData} />
     </div>
   );
