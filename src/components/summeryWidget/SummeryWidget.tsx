@@ -45,7 +45,7 @@ const SummeryWidget = () => {
   return (
     <div className="flex items-center justify-between border border-gray-300 rounded-md hover:shadow-xl w-full lg:w-4/12">
       {/* pie chart contaier */}
-      <div className="w-32">
+      <div className="w-48">
         <StyledEngineProvider injectFirst>
           {/* StyledEngineProvider is used to override the mui provided styles */}
           <Box className="md:w-full " sx={{ padding: 0, margin: 0 }}>
