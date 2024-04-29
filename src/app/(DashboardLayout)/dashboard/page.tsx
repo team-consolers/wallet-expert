@@ -2,10 +2,11 @@ import React from 'react'
 import { TbCurrencyTaka } from "react-icons/tb";
 import { Divider } from '@mui/material'
 import SummeryWidget from '@/components/summeryWidget/SummeryWidget';
-
+import LineChartUi from '@/components/lineChart/LineCharUi'
 const DashboardPage = () => {
   return (
-    <div className="flex flex-wrap md:flex-wrap lg:flex-nowrap justify-between gap-3 md:gap-2 lg:gap-2 mt-3 md:mt-0">
+   <div>
+     <div className="flex flex-wrap md:flex-wrap lg:flex-nowrap justify-between gap-3 md:gap-2 lg:gap-2 mt-3 md:mt-0">
       {/* balance summary card */}
       <div className="hover:shadow-2xl rounded-md border border-gray-300 p-8 w-full lg:w-4/12">
        <h2 className="text-xl font-bold mb-2">Summary</h2>
@@ -23,6 +24,8 @@ const DashboardPage = () => {
       <SummeryWidget/>
       <SummeryWidget/>
     </div>
+    <LineChartUi/>
+   </div>
 
 
 
