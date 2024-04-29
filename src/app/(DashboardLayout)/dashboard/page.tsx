@@ -3,6 +3,8 @@ import { TbCurrencyTaka } from "react-icons/tb";
 import { Divider } from '@mui/material'
 import SummeryWidget from '@/components/summeryWidget/SummeryWidget';
 import LineChartUi from '@/components/lineChart/LineCharUi'
+import BarChartUi from '@/components/barcharts/BarChartUi';
+import TotalAmount from '@/components/totalAmount/TotalAmount';
 const DashboardPage = () => {
   return (
    <div>
@@ -25,6 +27,11 @@ const DashboardPage = () => {
       <SummeryWidget/>
     </div>
     <LineChartUi/>
+    <h3 className="font-bold text-gray-600 mt-12 ">Last 7Days Income and Expenses</h3>
+   <div className='flex md:flex-col lg:flex-row gap-12 md:gap-4'>
+   <BarChartUi/>
+    <TotalAmount/>
+   </div>
    </div>
 
 
