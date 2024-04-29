@@ -28,7 +28,7 @@ const DashboardPage = () => {
     </div>
     <LineChartUi/>
     <h3 className="font-bold text-gray-600 mt-12 ">Last 7Days Income and Expenses</h3>
-   <div className='flex md:flex-col lg:flex-row gap-12 md:gap-4'>
+   <div className='flex md:flex-col lg:flex-row gap-5 lg:gap-12'>
    <BarChartUi/>
     <TotalAmount/>
    </div>
