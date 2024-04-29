@@ -14,7 +14,12 @@
     "@hookform/resolvers": "^3.3.4",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+<<<<<<< HEAD
+    "@mui/x-charts": "^7.3.1",
+    "chart.js": "^4.4.2",
+=======
     "dayjs": "^1.11.11",
+>>>>>>> 5352a2369c808d787664529d30425cebe1b18f11
     "next": "14.2.2",
     "react": "^18",
     "react-big-calendar": "^1.12.0",

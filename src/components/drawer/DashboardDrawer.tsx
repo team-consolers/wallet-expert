@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import DrawerSidebar from './DrawerSidebar';
 
-const drawerWidth = 230;
+const drawerWidth = 240;
 
 export default function DashboardDrawer({children}:{children:React.ReactNode}) { 
   const [mobileOpen, setMobileOpen] = React.useState(false);
