@@ -37,6 +37,7 @@ const CalendarPage = () => {
       </div>;
     },
   };
+  
   return (
     <div>
       <Calendar
