@@ -9,11 +9,11 @@ const TotalAmount = () => {
           <p className="font-semibold text-gray-600" >Bank Account</p> <p className='text-green-500'> ৳ 00.00</p>
         </div>
         <div className='flex justify-between'>
-          <p className="font-semibold text-gray-600">Wallet: </p> <p className='text-red-500'> -৳ 00.00</p>
+          <p className="font-semibold text-gray-600">Wallet: </p> <p className='text-green-500'> -৳ 00.00</p>
         </div>
         <Divider/>
         <div className='flex justify-between mt-1'>
-          <p className="font-semibold text-gray-600 ">Total Remanings:</p> <p className='text-green-500'> -৳ 00.00</p>
+          <p className="font-semibold text-gray-600 ">Total:</p> <p className='text-green-500'> -৳ 00.00</p>
         </div>
       </div>
   )
