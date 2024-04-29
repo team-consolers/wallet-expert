@@ -46,10 +46,10 @@ const CalendarPage = () => {
   
   
   return (
-    <div>
+    <div className="">
       <Calendar
-        className="mx-auto"
-        style={{ height: "90vh", width: "80vw" }}
+        className="mx-auto  "
+        style={{ height: "90vh", width: "75vw" }}
         localizer={localizer}
         date={currentDate}
         onNavigate={handleNavigate} 
