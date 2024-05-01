@@ -1,6 +1,12 @@
-import DebitCard from "./DebitCard";
+"use client"
 
+
+import DebtsModal from "@/components/DebtsModal";
+import DebitCard from "./DebitCard";
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+import {useState} from "react";
 const DebitPage = () => {
+  const [open,setOpen]=useState(false)
   const debitData = [
     {
       id: 5,
@@ -69,44 +75,55 @@ const DebitPage = () => {
     }
   });
 
-  console.log("Sum of differences for Debit:", sumOfDebitDifferences);
-  console.log("Sum of differences for Credit:", sumOfCreditDifferences);
+  // console.log("Sum of differences for Debit:", sumOfDebitDifferences);
+  // console.log("Sum of differences for Credit:", sumOfCreditDifferences);
 
   return (
-    <div className="flex justify-center ">
-      <div className="bg-slate-100 p-1 rounded-md">
-        {debitData.map((item) => (
-          <DebitCard
-            key={item.id}
-            dataType={item.dataType}
-            completed={item.completed}
-            maxCompleted={item.maxCompleted}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            clientName={item.clientName}
-          />
-        ))}
-
-        <div className="mx-4 my-1">
-          Total Residual Amount:
-          <span className="text-green-700 ">
-            ${sumOfDebitDifferences + sumOfCreditDifferences}.00
-          </span>
+    <div>
+      <div className="flex justify-center relative">
+        <DebtsModal open={open} setOpen={setOpen}/>
+        <div className="flex flex-col gap-2 fixed lg:bottom-[40px] lg:right-[40px] bottom-[10px] right-[10px]">
+          <button onClick={()=>setOpen(true)} className="text-xl lg:text-5xl md:text-3xl text-green-700">
+            <FaPlusCircle />
+          </button>
+          <button className="text-xl lg:text-5xl md:text-3xl text-red-700">
+            <FaMinusCircle />
+          </button>
         </div>
-        <div className="mx-4 my-1">
-          Net Residual Amount:
-          <span
-            className={
-              sumOfDebitDifferences > sumOfCreditDifferences
-                ? "text-red-700"
-                : "text-green-700"
-            }
-          >
-            {sumOfDebitDifferences > sumOfCreditDifferences
-              ? "-"+ "$" + (sumOfDebitDifferences - sumOfCreditDifferences)
-              : sumOfCreditDifferences - sumOfDebitDifferences}
-            .00
-          </span>
+        <div className="bg-slate-100 p-1 rounded-md">
+          {debitData.map((item) => (
+            <DebitCard
+              key={item.id}
+              dataType={item.dataType}
+              completed={item.completed}
+              maxCompleted={item.maxCompleted}
+              startDate={item.startDate}
+              endDate={item.endDate}
+              clientName={item.clientName}
+            />
+          ))}
+
+          <div className="mx-4 my-1">
+            Total Residual Amount: 
+            <span className="text-green-700 ">
+              ${sumOfDebitDifferences + sumOfCreditDifferences}.00
+            </span>
+          </div>
+          <div className="mx-4 my-1">
+            Net Residual Amount: 
+            <span
+              className={
+                sumOfDebitDifferences > sumOfCreditDifferences
+                  ? "text-red-700"
+                  : "text-green-700"
+              }
+            >
+              {sumOfDebitDifferences > sumOfCreditDifferences
+                ? "-" + "$" + (sumOfDebitDifferences - sumOfCreditDifferences)
+                : sumOfCreditDifferences - sumOfDebitDifferences}
+              .00
+            </span>
+          </div>
         </div>
       </div>
     </div>
