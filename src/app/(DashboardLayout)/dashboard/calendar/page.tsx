@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import React, { useState } from "react";
 import "./style.css";
+import { FaRegCalendarAlt } from "react-icons/fa";
 const CalendarPage = () => {
   const [currentView, setCurrentView] = useState<View>("month");
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -27,30 +28,37 @@ const CalendarPage = () => {
       end: dayjs("2024-05-03T17:30:00").toDate(),
       title: "akd...",
     },
+    {
+      start: dayjs("2024-04-03T16:30:00").toDate(),
+      end: dayjs("2024-04-03T16:30:00").toDate(),
+      title: "biriyani...",
+    },
   ];
   const components = {
     event: (props:any) => {
       // console.log(props);
-      return <div  className="flex justify-center ">
-        {/* <p>icon</p> */}
+      return <div  className="flex justify-center items-center gap-2">
+        <FaRegCalendarAlt />
         {props.title}
       </div>;
     },
   };
   
+  
   return (
-    <div>
+    <div className="">
       <Calendar
-        className="mx-auto"
-        style={{ height: "90vh", width: "80vw" }}
+        className="mx-auto  "
+        style={{ height: "90vh", width: "75vw" }}
         localizer={localizer}
         date={currentDate}
-        onNavigate={handleNavigate}
+        onNavigate={handleNavigate} 
         view={currentView}
         onView={handleView}
         views={["month", "week", "day"]}
         events={events}
         components={components}
+        
       />
     </div>
   );
