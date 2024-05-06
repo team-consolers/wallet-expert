@@ -12,13 +12,15 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const theme = createTheme({
-  palette: {
-    customGreen: {
-      main: '#43a047',
-    },
-  },
-});
+
+// const theme = createTheme({
+//   palette: {
+//     customGreen: {
+//       main: '#43a047',
+//     },
+//   },
+// });
+
 const data = [
   {id: 1, image: img1, transactionType:'Entertainment', transactionFrom: 'wallet', amount: 43, date: '12/02/2024'  },
   {id: 2, image: img2, transactionType:'Eating', transactionFrom: 'wallet', amount: 43, date: '31/02/2024'  },
@@ -84,13 +86,13 @@ const TransactionPage = () => {
   }
 </div>
 <div className='flex justify-end my-2'>
-<ThemeProvider theme={theme}>
+{/* <ThemeProvider theme={theme}> */}
       <div className='flex justify-end my-2'>
-        <Fab className="hover:bg-green-400 text-white font-bold" color="customGreen" aria-label="add">
+        <Fab className="bg-green-500 hover:bg-green-400 text-white font-bold" color="customGreen" aria-label="add">
           <AddIcon  />
         </Fab>
       </div>
-    </ThemeProvider>
+    {/* </ThemeProvider> */}
 </div>
     </div>
   )
