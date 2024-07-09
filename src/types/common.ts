@@ -1,0 +1,1 @@
+export const accountType=["CREDIT CARD","ACCOUNT","WALLET"]
